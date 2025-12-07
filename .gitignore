@@ -6,9 +6,14 @@ package-lock.json
 .env
 .env.local
 .env.*.local
+.env.production
+.env.development
 
-# Optional: Uncomment to exclude Supabase config (use environment variables instead)
-# supabase-config.js
+# Generated environment config (contains secrets)
+env-config.json
+
+# Supabase config with credentials (use .env instead)
+# Note: supabase-config.js is kept for fallback, but should use env vars in production
 
 # OS files
 .DS_Store

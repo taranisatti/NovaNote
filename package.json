@@ -1,5 +1,20 @@
 {
-  "dependencies": {
-    "git": "^0.1.5"
-  }
+  "name": "novanote",
+  "version": "1.0.0",
+  "description": "A full-featured, modern To-Do List and Task Manager web application",
+  "main": "index.html",
+  "scripts": {
+    "build:env": "node build-env.js",
+    "dev": "echo 'Open index.html in your browser or use a local server'",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "todo",
+    "task-manager",
+    "productivity",
+    "supabase"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {}
 }

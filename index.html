@@ -381,7 +381,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Supabase Config -->
+    <!-- Environment Variables Loader (loads env-config.json if available) -->
+    <script src="env-config.js"></script>
+    <!-- Supabase Config (reads from window._env or uses defaults) -->
     <script src="supabase-config.js"></script>
     <script src="script.js"></script>
 </body>

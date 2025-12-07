@@ -135,8 +135,6 @@ async function handleSignup(event) {
         }
         
         if (data.user) {
-            showAuthMessage('Account created successfully! Please check your email to verify your account.', 'success');
-            
             // Auto login if email confirmation is disabled
             if (data.session) {
                 currentUser = {
@@ -144,14 +142,15 @@ async function handleSignup(event) {
                     email: data.user.email,
                     name: name
                 };
+                showAuthMessage('Account created successfully!', 'success');
                 setTimeout(() => {
                     showApp();
-                }, 1500);
+                }, 1000);
             } else {
                 // Email confirmation required
+                showAuthMessage('Account created! Please check your email and click the confirmation link to sign in.', 'success');
                 setTimeout(() => {
                     switchAuth('login');
-                    showAuthMessage('Please check your email and click the confirmation link to sign in.', 'success');
                 }, 2000);
             }
         }
